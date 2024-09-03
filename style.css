@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 nav{
@@ -34,13 +35,8 @@ ul li{
 
 ul li a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 17px;
 }
 
- .section1 img{
-    width: 100%;
-    height: 300px;
-    background-size: cover;
-}
 

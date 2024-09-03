@@ -4,14 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
     
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1IbXyVY4AnDQlJlnGp1JcuT7jzwjju9SvrLVRyOoPp2hbWrGmJQ1iXwJSp" crossorigin="anonymous">
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-TcSIqQb027qvyjSMfHjOMaLkfuwVxZzUPnCJA7lzmcCWNIP3zVgnCgpD7Xa" crossorigin="anonymous"></script>
+<style>
+    body{
+        overflow-x: hidden;
+    }
+    *{
+    margin: 0;
+    padding: 0;
+    
+}
 
+nav{
+    position: fixed;
+    background-color: skyblue;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo{
+    font-size: 25px;
+    position: relative;
+    left: 5%;
+    color: white;
+    font-weight: bold;
+    line-height:70px;
+}
+
+ul{
+    position: relative;
+    float: right;
+    margin-right: 20px;
+}
+
+ul li{
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+</style>
 </head>
 <body>
     <nav>
@@ -20,12 +64,12 @@
             <li><a href="">Home</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="">Admission</a></li>
-            <li><a href="" class="btn btn-success ">Login</a></li>
+            <li><a href="login.php" class="btn btn-success ">Login</a></li>
         </ul>
     </nav>
     <div class="section1">
 
-        <img src="img/school.jpeg" style="width: 100%; height: 600px; filter: brightness(0.6);" alt="">
+        <img src="img/school.jpeg" style="width: 100%; height: 600px; filter: brightness(0.3);" alt="">
         <div class="content-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">
             <div class="container">
                 <div class="row">
@@ -35,7 +79,7 @@
                         <h2 class="text-uppercase" style="font-size: 3.5em; margin-top: 80px; color: rgb(0, 240, 0);">Welcome to Our School</h2>
                         <p style="font-size: 1.5em;">Our school is known for its excellent education system, modern facilities, and commitment to student success. We foster a community of learning and innovation where students are encouraged to thrive.</p>
                         <hr style="border-top: 2px solid rgb(0, 240, 0); width: 50%; margin: 0 auto;">
-                        <a href="#" class="btn btn-success" style="margin-top: 60px; font-size: 20px;">Learn More</a>
+                        <a href="#" class="btn btn-success" style="margin-top: 60px; font-size: 20px; background-color:green">Learn More</a>
                     </div>
                 </div>
             </div>
