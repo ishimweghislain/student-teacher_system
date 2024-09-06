@@ -1,3 +1,16 @@
+<?php
+error_reporting(0);
+session_start();
+session_destroy();
+
+if($_SESSION['message']){
+    $message=$_SESSION['message'];
+    echo "<script type='text/javascript'>
+    alert('$message');
+    </script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,7 +159,7 @@ ul li a{
     </center>
     <div align="center" class="admission form">
         
-        <form action="">
+        <form action="data_check.php" method="POST">
             <div class="form" style="margin-right: -80px;">
             <div class="row mb-3" style="margin-bottom: 20px;">
                 <div class="col-md-6">
@@ -181,7 +194,7 @@ ul li a{
                 </div>
             </div>
             <div>
-                <input class="btn btn-success" type="submit" value="Apply" style="width: 30%; margin-left: -130px;">
+                <input name="apply" class="btn btn-success" type="submit" value="Apply" style="width: 30%; margin-left: -130px;" >
             </div>
             </div>
         </form>
