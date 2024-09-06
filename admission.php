@@ -5,6 +5,15 @@ if(!isset($_SESSION["username"])){
 }elseif($_SESSION["usertype"]=='student'){
     header("location:login.php");
 }
+
+$host ="localhost";
+$user ="root";
+$password="";
+$db="schoolproject";
+$data = mysqli_connect($host,$user,$password,$db);
+
+$sql = "SELECT *FROM admission";
+$result = mysqli_query($data,$sql);
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +31,7 @@ if(!isset($_SESSION["username"])){
     *{
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
     }
         header{
             background-color: skyblue;
@@ -62,14 +72,57 @@ if(!isset($_SESSION["username"])){
         margin-left: 20%;
         margin-top: 5%;
      }
+     .content .table-responsive{
+        width: 85%;
+     }
+
     </style>
 </head>
 <body>
-<?php
+ <?php
 include 'admin_sidebar.php';
+
  ?>
 <div class="content">
-    <h1>Admin Dashboard</h1>
+    <h1>Applied for Admission</h1>
+    <div class="container mt-5">
+  <div class="table-responsive">
+    <table class="table table-striped table-hover table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        while($info=$result->fetch_assoc()){
+
+        
+        ?>
+        <tr>
+          <td>
+            <?php echo "{$info['name']}";  ?>
+          </td>
+          <td>
+          <?php echo "{$info['email']}";  ?>
+          </td>
+          <td>
+          <?php echo "{$info['phone']}";  ?>
+          </td>
+          <td>
+          <?php echo "{$info['message']}";  ?>
+          </td>
+        </tr>
+        <?php
+        }
+        ?>
+      </tbody>
+    </table>
+  </div>
+</div>
 </div>
 
 </body>
