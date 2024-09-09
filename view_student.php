@@ -106,6 +106,7 @@ include 'admin_sidebar.php';
           <th>Phone</th>
           <th>Password</th>
           <th>Delete</th>
+          <th>update</th>
         </tr>
       </thead>
       <tbody>
@@ -129,6 +130,9 @@ include 'admin_sidebar.php';
           </td>
           <td>
           <?php echo "<a onClick=\" javascript:return confirm('Are you sure you to delete this student')\" href='delete.php?student_id={$info['id']}'><button class='btn btn-danger'>Delete</button></a>";  ?>
+          </td>
+          <td>
+          <?php echo "<a href='update_student.php?student_id={$info['id']}'><button class='btn btn-success'>update</button></a>";  ?>
           </td>
         </tr>
         <?php
