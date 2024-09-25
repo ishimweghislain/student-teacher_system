@@ -16,16 +16,35 @@ if(isset($_POST["apply"])){
     $data_email = $_POST["email"];
     $data_message = $_POST["message"];
     $data_phone = $_POST["phone"];
-    
-    $sql="INSERT INTO admission(name,email,message,phone) VALUES('$data_name','$data_email','$data_message','$data_phone')";
-    $result = mysqli_query($data,$sql);
+
 
     if($result){
-    $_SESSION['message']="your application sent successful";
+        $_SESSION['message']="your application sent successful";
+    
+        header("location: index.php");
+        }
+        
+        if(empty($data_name) OR empty($data_email) OR empty($data_message) OR empty($data_phone)){
+            $_SESSION['message']="Please all fields are required";
+    
+        header("location: index.php");
+        }
+        
+        else{
 
-    header("location: index.php");
-    }else{
-        echo"apply failed";
-    }
+    $sql="INSERT INTO admission(name,email,message,phone) VALUES('$data_name','$data_email','$data_message','$data_phone')";
+    
+    if(mysqli_query($data, $sql)){
+        $_SESSION['message']="you are registered successfully";
+    
+    }else {
+        die("something went wrong");
+     }
+
+     mysqli_close($conn);
+   }
+    
+    
+   
 }
 ?>
