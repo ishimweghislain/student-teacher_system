@@ -72,7 +72,7 @@ ul li a{
 </head>
 <body>
     <nav>
-        <label class="logo" style="color: #267860;">W-school</label>
+        <label class="logo" style="color: #267860;">Crystal Fountain_Demy</label>
         <ul>
             <li><a href="">Home</a></li>
             <li><a href="">Contact</a></li>

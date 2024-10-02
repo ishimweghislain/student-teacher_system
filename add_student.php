@@ -155,6 +155,6 @@ include 'admin_sidebar.php';
             </div>
             </div>
         </form>
-        
+    </div>
 </body>
 </html>
