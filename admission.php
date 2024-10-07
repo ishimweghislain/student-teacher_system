@@ -92,8 +92,10 @@ include 'admin_sidebar.php';
         <tr>
           <th>Name</th>
           <th>Email</th>
+          <th>Course</th>
+          <th>Location</th>
           <th>Phone</th>
-          <th>Message</th>
+        
         </tr>
       </thead>
       <tbody>
@@ -103,18 +105,30 @@ include 'admin_sidebar.php';
         
         ?>
         <tr>
+
           <td>
             <?php echo "{$info['name']}";  ?>
           </td>
+
           <td>
           <?php echo "{$info['email']}";  ?>
           </td>
+
+          
+          <td>
+          <?php echo "{$info['course']}";  ?>
+          </td>
+
+
+          <td>
+          <?php echo "{$info['location']}";  ?>
+          </td>
+
+          
           <td>
           <?php echo "{$info['phone']}";  ?>
           </td>
-          <td>
-          <?php echo "{$info['message']}";  ?>
-          </td>
+         
         </tr>
         <?php
         }

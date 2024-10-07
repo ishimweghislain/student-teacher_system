@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 $_SESSION["usertype"]="admin";
 
-                header("location: adminhome.php");
+                header("location: admission.php");
 
                 exit();
             }

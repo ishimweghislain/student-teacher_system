@@ -8,43 +8,34 @@ $db = "schoolproject";
 $data = mysqli_connect($host, $user, $password, $db);
 
 if (!$data) {
-    die("Connection failed");
+    die("Connection failed: " . mysqli_connect_error());
 }
 
-if(isset($_POST["apply"])){
+if (isset($_POST["apply"])) {
     $data_name = $_POST["name"];
     $data_email = $_POST["email"];
-    $data_message = $_POST["message"];
+    $data_location = $_POST["location"];
     $data_phone = $_POST["phone"];
+    $data_course = $_POST["course"];
+    if (empty($data_name) || empty($data_email) || empty($data_location) || empty($data_course) || empty($data_phone)) {
+        $_SESSION['message'] = "All fields are required";
+        header("Location: index.php");
+        exit(); 
+    }
 
 
-    if($result){
-        $_SESSION['message']="your application sent successful";
-    
-        header("location: index.php");
-        }
-        
-        if(empty($data_name) OR empty($data_email) OR empty($data_message) OR empty($data_phone)){
-            $_SESSION['message']="Please all fields are required";
-    
-        header("location: index.php");
-        }
-        
-        else{
+    $sql = "INSERT INTO admission(name, email, course, location, phone) VALUES ('$data_name', '$data_email','$data_course', '$data_location', '$data_phone')";
 
-    $sql="INSERT INTO admission(name,email,message,phone) VALUES('$data_name','$data_email','$data_message','$data_phone')";
-    
-    if(mysqli_query($data, $sql)){
-        $_SESSION['message']="you are registered successfully";
-    
-    }else {
-        die("something went wrong");
-     }
+    if (mysqli_query($data, $sql)) {
+        $_SESSION['message'] = "You are registered successfully";
+    } else {
+        $_SESSION['message'] = "Something went wrong: " . mysqli_error($data);
+    }
 
-     mysqli_close($conn);
-   }
-    
-    
    
+    mysqli_close($data);
+
+    header("Location: index.php");
+    exit();
 }
 ?>

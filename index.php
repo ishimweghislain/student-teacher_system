@@ -57,16 +57,22 @@ ul{
     margin-right: 20px;
 }
 
-ul li{
-    display: inline-block;
-    line-height: 70px;
-    margin: 0 5px;
-}
-
 ul li a{
     text-decoration: none;
-    color: white;
+    color: green;
     font-size: 17px;
+    background-color: rgba(255, 255, 255, 0.589);
+    padding:8px;
+    border-radius:7px
+}
+ul li a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.452);
+    padding:8px;
+    border-radius:7px;
+    transition: ease-in-out 1s;
+
 }
 </style>
 </head>
@@ -177,6 +183,23 @@ ul li a{
                     <input class="form-control" style="width: 400px; margin-left: -820px;" type="text" name="email" id="email">
                 </div>
             </div>
+
+            <div class="row mb-3" style="margin-bottom: 20px;">
+                <div class="col-md-6">
+                    <label class="form-label" for="course">Course :</label>
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control" style="width: 400px; margin-left: -820px;" type="text" name="course" >
+                </div>
+            </div>
+            <div class="row mb-3" style="margin-bottom: 20px;">
+                <div class="col-md-6">
+                    <label class="form-label" for="location">Location :</label>
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control" style="width: 400px; margin-left: -820px;" type="text" name="location">
+                </div>
+            </div>
             <div class="row mb-3" style="margin-bottom: 20px;">
                 <div class="col-md-6">
                     <label class="form-label" for="phone">Phone :</label>
@@ -185,14 +208,7 @@ ul li a{
                     <input class="form-control" style="width: 400px; margin-left: -820px;" type="text" name="phone" id="phone">
                 </div>
             </div>
-            <div class="row mb-3" style="margin-bottom: 20px;">
-                <div class="col-md-6">
-                    <label class="form-label" for="message">Message :</label>
-                </div>
-                <div class="col-md-6">
-                    <textarea name="message" id="message" class="form-control" style="width: 400px; margin-left: -820px;"></textarea>
-                </div>
-            </div>
+            
             <div>
                 <input name="apply" class="btn btn-success" type="submit" value="Apply" style="width: 30%; margin-left: -130px;" >
             </div>
