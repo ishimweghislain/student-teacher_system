@@ -81,7 +81,7 @@ ul li a:hover{
         <label class="logo" style="color: #267860;">Crystal Fountain_Demy</label>
         <ul>
             <li><a href="">Home</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="">About Us</a></li>
             <li><a href="">Admission</a></li>
             <li><a href="login.php" class="btn btn-success ">Login</a></li>
         </ul>
