@@ -17,6 +17,7 @@ if (isset($_POST["apply"])) {
     $data_location = $_POST["location"];
     $data_phone = $_POST["phone"];
     $data_course = $_POST["course"];
+    $data_gender = $_POST["gender"];
     if (empty($data_name) || empty($data_email) || empty($data_location) || empty($data_course) || empty($data_phone)) {
         $_SESSION['message'] = "All fields are required";
         header("Location: index.php");
@@ -24,7 +25,7 @@ if (isset($_POST["apply"])) {
     }
 
 
-    $sql = "INSERT INTO admission(name, email, course, location, phone) VALUES ('$data_name', '$data_email','$data_course', '$data_location', '$data_phone')";
+    $sql = "INSERT INTO admission(name, email, course, gender, location, phone) VALUES ('$data_name', '$data_email','$data_course','$data_gender', '$data_location', '$data_phone')";
 
     if (mysqli_query($data, $sql)) {
         $_SESSION['message'] = "You are registered successfully";

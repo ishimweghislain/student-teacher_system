@@ -74,11 +74,12 @@ $result = mysqli_query($data,$sql);
      }
      .content{
         margin-left: 20%;
-        margin-top: 5%;
+        margin-top: 10%;
      }
      .content .table-responsive{
         width: 85%;
         margin-left: -20%;
+        margin-top: -70px;
      }
     </style>
 </head>

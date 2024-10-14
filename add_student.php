@@ -103,7 +103,7 @@ body{
      }
      .content{
         margin-left: 20%;
-        margin-top: 5%;
+        margin-top: 10%;
      }
     </style>
 </head>

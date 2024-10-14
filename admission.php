@@ -70,7 +70,7 @@ $result = mysqli_query($data,$sql);
      }
      .content{
         margin-left: 20%;
-        margin-top: 5%;
+        margin-top: 8%;
      }
      .content .table-responsive{
         width: 85%;
@@ -93,6 +93,7 @@ include 'admin_sidebar.php';
           <th>Name</th>
           <th>Email</th>
           <th>Course</th>
+          <th>Gender</th>
           <th>Location</th>
           <th>Phone</th>
         
@@ -119,6 +120,9 @@ include 'admin_sidebar.php';
           <?php echo "{$info['course']}";  ?>
           </td>
 
+          <td>
+          <?php echo "{$info['gender']}";  ?>
+          </td>
 
           <td>
           <?php echo "{$info['location']}";  ?>

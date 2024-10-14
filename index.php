@@ -192,6 +192,26 @@ ul li a:hover{
                     <input class="form-control" style="width: 400px; margin-left: -820px;" type="text" name="course" >
                 </div>
             </div>
+
+     
+            <div class="row mb-3">
+    <div class="col-md-6">
+        <label class="form-label" for="gender">Gender :</label>
+    </div>
+    <div class="col-md-6">
+        <div class="form-check form-check-inline" style="margin-left: -1170px;">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+            <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check form-check-inline"  style="margin-left: -1153px;">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+            <label class="form-check-label" for="female">Female</label>
+        </div>
+    </div>
+</div>
+
+
+
             <div class="row mb-3" style="margin-bottom: 20px;">
                 <div class="col-md-6">
                     <label class="form-label" for="location">Location :</label>
