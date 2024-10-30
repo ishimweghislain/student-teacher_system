@@ -250,7 +250,7 @@ if ($_SESSION['message']) {
     <script>
         AOS.init({
             duration: 1000,
-            once: true,
+            once: false,
             offset: 100
         });
 
@@ -261,8 +261,8 @@ if ($_SESSION['message']) {
                     event.preventDefault();
                     var hash = this.hash;
                     $('html, body').animate({
-                        scrollTop: $(hash).offset().top - 70 // Adjusted for fixed navbar height
-                    }, 800, function(){
+                        scrollTop: $(hash).offset().top - 70 
+                    }, 1000, function(){
                         window.location.hash = hash;
                     });
                 }
